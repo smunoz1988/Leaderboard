@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wbpack Exercise</title>
 </head>
 <body>
-    <h1>Hello webpack!</h1>
-    <p>test</p>
-    <p>test2</p>
+
+  <h1>Leaderboard</h1>
+
+  <section id="scoreSection" class="flex-row">
+    
+    <div class="scoresDiv">
+      <div class="recentScores flex-row">
+        <p class="divTitles">Recent scores</p>
+        <button id="refreshBtn">Refresh</button>
+      </div>
+      <div id="scoresContainer">
+        <div>Juan: 100</div>
+        <div>Mary: 200</div>
+        <div>Willian: 500</div>
+        <div>Andrea: 300</div>
+      </div> 
+    </div>
+
+    <div class="addScoreDiv flex-column">
+      <p class="divTitles">Add your score</p>
+      <input type="text" id="inputName" placeholder="Your name">
+      <input type="number" id="inputScore" placeholder="Your score">
+      <div class="submitBtnContainer flex-row">
+        <button id="submitBtn">Submit</button>
+      </div>
+    </div>
+
+  </section>
+
 </body>
 </html>

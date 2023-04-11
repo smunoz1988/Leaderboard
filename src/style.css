@@ -1,7 +1,78 @@
-body {
-  background-color: bisque;
+* {
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
-p {
-  color: rebeccapurple;
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 2rem;
+}
+
+#scoreSection {
+  width: 70%;
+  margin: auto;
+}
+
+.divTitles {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.scoresDiv {
+  padding: 2rem;
+  width: 50%;
+}
+
+.recentScores {
+  justify-content: space-between;
+  align-items: center;
+}
+
+#refreshBtn {
+  height: 70%;
+  box-shadow: 2px 2px;
+}
+
+#scoresContainer {
+  border: solid 2px black;
+}
+
+#scoresContainer div {
+  padding: 0.5rem;
+}
+
+#scoresContainer div:nth-child(even) {
+  background-color: rgb(177, 163, 163);
+}
+
+.addScoreDiv {
+  padding: 2rem;
+  width: 50%;
+}
+
+#inputName {
+  width: 70%;
+}
+
+#inputScore {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 70%;
+}
+
+.submitBtnContainer {
+  width: 72%;
+  justify-content: right;
+}
+
+#submitBtn {
+  box-shadow: 2px 2px;
+  width: 30%;
 }
