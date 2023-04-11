@@ -1,7 +1,3 @@
-body {
-  background-color: bisque;
-}
-
-p {
-  color: rebeccapurple;
+* {
+  font-family: "Lucida Console", "Courier New", monospace;
 }
