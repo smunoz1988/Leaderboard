@@ -2,13 +2,20 @@
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
-h1 {
+.flex-row {
   display: flex;
-  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 2rem;
 }
 
 #scoreSection {
-  display: flex;
   width: 70%;
   margin: auto;
 }
@@ -24,7 +31,6 @@ h1 {
 }
 
 .recentScores {
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -49,8 +55,6 @@ h1 {
 .addScoreDiv {
   padding: 2rem;
   width: 50%;
-  display: flex;
-  flex-direction: column;
 }
 
 #inputName {
@@ -64,7 +68,6 @@ h1 {
 }
 
 .submitBtnContainer {
-  display: flex;
   width: 72%;
   justify-content: right;
 }
