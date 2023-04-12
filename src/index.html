@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wbpack Exercise</title>
+  <title>Leaderboard</title>
 </head>
 <body>
 
@@ -14,23 +14,21 @@
     <div class="scoresDiv">
       <div class="recentScores flex-row">
         <p class="divTitles">Recent scores</p>
-        <button id="refreshBtn">Refresh</button>
+        <button type="button" id="refreshBtn">Refresh</button>
       </div>
       <div id="scoresContainer">
-        <div>Juan: 100</div>
-        <div>Mary: 200</div>
-        <div>Willian: 500</div>
-        <div>Andrea: 300</div>
       </div> 
     </div>
 
     <div class="addScoreDiv flex-column">
       <p class="divTitles">Add your score</p>
-      <input type="text" id="inputName" placeholder="Your name">
-      <input type="number" id="inputScore" placeholder="Your score">
-      <div class="submitBtnContainer flex-row">
-        <button id="submitBtn">Submit</button>
-      </div>
+      <form id="addNewScoreForm">
+        <input type="text" id="inputName" placeholder="Your name">
+        <input type="number" id="inputScore" placeholder="Your score">
+        <div class="submitBtnContainer flex-row">
+          <button type="submit" id="submitBtn">Submit</button>
+        </div>
+      </form>
     </div>
 
   </section>
