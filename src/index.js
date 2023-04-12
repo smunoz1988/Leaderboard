@@ -63,6 +63,6 @@ submitBtn.addEventListener('click', (e) => {
     return;
   }
   postDataServer({ user: inputName.value, score: inputScore.value });
-  inputName.value = ''
-  inputScore.value = ''
+  inputName.value = '';
+  inputScore.value = '';
 });
