@@ -64,6 +64,7 @@
 ### Key Features <a name="key-features"></a>
 
 - Webpack
+- Use API to POST and GET scores data 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,7 +126,6 @@ You can deploy this project using tools as Parcel.
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Scores items created dinamycally in JS.
-- Use API to save and load Scores data 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
