@@ -3,42 +3,34 @@ import './style.css';
 const getDataServer = async () => {
   try {
     const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/hBfPl1kjDZ5eEwBSxYij/scores/', {
-      method: 'GET'
-    })
+      method: 'GET',
+    });
+    const responseDataApi = await response.json();
+    return responseDataApi;
   } catch (error) {
-    console.log('Error')   
+    return error;   
   }
 }
 
-const scores = { //this has to be the data received by API
-    "result": [
-        {
-            "user": "John Doe",
-            "score": 42
-        },
-        {
-            "user": "Peter Parker",
-            "score": 35
-        },
-        {
-            "user": "Wonder Woman",
-            "score": 50
-        }
-    ]
-};
 
 const generateScoreItem = (score) => {
   let itemScore = `<div>${score.user}:${score.score}</div>`;
   return itemScore;
 };
 
-const renderScores = () => {
-  const scoreContainer = document.getElementById('scoresContainer');
-  scoreContainer.innerHTML = '';
-  scores.result.forEach((score) => {
+const renderScores = async () => {
+  try {
+    const score = await getDataServer();
+    const { result } = score;
+    const scoreContainer = document.getElementById('scoresContainer');
+    scoreContainer.innerHTML = '';
+    result.forEach((score) => {
     let itemScore = generateScoreItem(score);
     scoreContainer.innerHTML += itemScore;
   });
+  } catch (error) {
+    return error;
+  }
 };
 
 const postDataServer = async (inputData) => {
@@ -53,9 +45,9 @@ const postDataServer = async (inputData) => {
     const responseReceived = await response.json();
     console.log(responseReceived);
   } catch (error) {
-    console.log(error);
+    return error;
   }
 }
 
-postDataServer({ "user": "Wonder Woman", "score": 50 })
+//postDataServer({ "user": "test 333", "score": 40 });
 renderScores();
