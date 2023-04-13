@@ -1,5 +1,7 @@
 * {
   font-family: "Lucida Console", "Courier New", monospace;
+  background-color: black;
+  color: white;
 }
 
 .flex-row {
@@ -13,6 +15,8 @@
 
 h1 {
   margin: 2rem;
+  width: 316px;
+  color: white;
 }
 
 #scoreSection {
@@ -41,7 +45,7 @@ h1 {
 }
 
 #scoresContainer {
-  border: solid 2px black;
+  border: solid 2px white;
 }
 
 #scoresContainer div {
@@ -49,7 +53,7 @@ h1 {
 }
 
 #scoresContainer div:nth-child(even) {
-  background-color: rgb(177, 163, 163);
+  background-color: rgb(47, 46, 46);
 }
 
 .addScoreDiv {

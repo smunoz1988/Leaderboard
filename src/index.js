@@ -1,5 +1,12 @@
 import './style.css';
 
+//html elements
+const inputName = document.getElementById('inputName');
+const inputScore = document.getElementById('inputScore');
+const submitBtn = document.getElementById('submitBtn');
+const refreshBtn = document.getElementById('refreshBtn');
+
+//Get data from API
 const getDataServer = async () => {
   try {
     const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/DjGnLPNMPeUjhLoQI02H/scores/', {
@@ -12,6 +19,25 @@ const getDataServer = async () => {
   }
 };
 
+//Send data to server
+const postDataServer = async (inputData) => {
+  try {
+    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/DjGnLPNMPeUjhLoQI02H/scores/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(inputData),
+    });
+    const responseReceived = await response.json();
+    return responseReceived;
+  } catch (error) {
+    return error;
+  }
+};
+
+
+//Render scores on html after consuming API with getDataServer function
 const generateScoreItem = (score) => {
   const itemScore = `<div>${score.user}:${score.score}</div>`;
   return itemScore;
@@ -34,28 +60,8 @@ const renderScores = async () => {
   return null;
 };
 
-const postDataServer = async (inputData) => {
-  try {
-    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/DjGnLPNMPeUjhLoQI02H/scores/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(inputData),
-    });
-    const responseReceived = await response.json();
-    return responseReceived;
-  } catch (error) {
-    return error;
-  }
-};
-
-const refreshBtn = document.getElementById('refreshBtn');
+//Button listeners to consume APIs
 refreshBtn.addEventListener('click', renderScores);
-
-const inputName = document.getElementById('inputName');
-const inputScore = document.getElementById('inputScore');
-const submitBtn = document.getElementById('submitBtn');
 
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
