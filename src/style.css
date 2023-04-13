@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url(./assets/background.png);
+  background-image: url(./assets/background1.jpg);
 }
 
 .flex-row {
@@ -47,7 +47,8 @@ h1 {
 #refreshBtn {
   box-shadow: 2px 2px;
   padding: 0.5rem;
-  background-color: black;
+  background-color: white;
+  color: black;
   transition: 0.4s;
   cursor: pointer;
 }
@@ -117,7 +118,8 @@ form {
   box-shadow: 2px 2px;
   padding: 0.5rem;
   margin-top: 1rem;
-  background-color: black;
+  background-color: white;
+  color: black;
   transition: 0.4s;
   cursor: pointer;
 }
