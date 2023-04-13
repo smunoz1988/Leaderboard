@@ -39,7 +39,13 @@ const postDataServer = async (inputData) => {
 
 //Render scores on html after consuming API with getDataServer function
 const generateScoreItem = (score) => {
-  const itemScore = `<div>${score.user}:${score.score}</div>`;
+  const itemScore = `
+  <div class='rankContainer flex-row'>
+    <p>1</p>
+    <p>${score.user}</p>
+    <p>${score.score}</p>
+  </div>
+  `;
   return itemScore;
 };
 

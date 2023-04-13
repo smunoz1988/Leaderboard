@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
-  font-family: "Lucida Console", "Courier New", monospace;
-  background-color: black;
+  font-family: 'Press Start 2P', cursive;
   color: white;
+}
+
+body {
+  background-color: black;
 }
 
 .flex-row {
@@ -15,8 +20,8 @@
 
 h1 {
   margin: 2rem;
-  width: 316px;
   color: white;
+  justify-content: center;
 }
 
 #scoreSection {
@@ -40,8 +45,9 @@ h1 {
 }
 
 #refreshBtn {
-  height: 70%;
   box-shadow: 2px 2px;
+  padding: 0.5rem;
+  background-color: black;
 }
 
 #scoresContainer {
@@ -59,24 +65,26 @@ h1 {
 .addScoreDiv {
   padding: 2rem;
   width: 50%;
+  align-items: end;
 }
 
-#inputName {
-  width: 70%;
-}
-
-#inputScore {
+.input {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  width: 70%;
+  padding: 0.5rem;
 }
 
-.submitBtnContainer {
-  width: 72%;
-  justify-content: right;
+form {
+  align-items: end;
 }
 
 #submitBtn {
   box-shadow: 2px 2px;
-  width: 30%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background-color: black;
+}
+
+.rankContainer {
+  justify-content: space-between;
 }

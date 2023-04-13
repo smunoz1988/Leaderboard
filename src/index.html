@@ -7,13 +7,13 @@
 </head>
 <body>
 
-  <h1>Leaderboard</h1>
+  <h1 class="flex-row">Leaderboard</h1>
 
   <section id="scoreSection" class="flex-row">
     
     <div class="scoresDiv">
       <div class="recentScores flex-row">
-        <p class="divTitles">Recent scores</p>
+        <p class="divTitles">HIGH SCORES</p>
         <button type="button" id="refreshBtn">Refresh</button>
       </div>
       <div id="scoresContainer">
@@ -22,12 +22,10 @@
 
     <div class="addScoreDiv flex-column">
       <p class="divTitles">Add your score</p>
-      <form id="addNewScoreForm">
-        <input type="text" id="inputName" placeholder="Your name">
-        <input type="number" id="inputScore" placeholder="Your score">
-        <div class="submitBtnContainer flex-row">
-          <button type="submit" id="submitBtn">Submit</button>
-        </div>
+      <form id="addNewScoreForm" class="flex-column">
+        <input type="text" id="inputName" class="input" placeholder="Your name">
+        <input type="number" id="inputScore" class="input" placeholder="Your score">
+        <button type="submit" id="submitBtn">Submit</button>
       </form>
     </div>
 
