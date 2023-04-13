@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
-  font-family: "Lucida Console", "Courier New", monospace;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+}
+
+body {
+  background-image: url(./assets/background1.jpg);
 }
 
 .flex-row {
@@ -13,10 +20,12 @@
 
 h1 {
   margin: 2rem;
+  color: white;
+  justify-content: center;
 }
 
 #scoreSection {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
@@ -36,43 +45,97 @@ h1 {
 }
 
 #refreshBtn {
-  height: 70%;
   box-shadow: 2px 2px;
+  padding: 0.5rem;
+  background-color: white;
+  color: black;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 #scoresContainer {
-  border: solid 2px black;
+  border: solid 2px white;
 }
 
 #scoresContainer div {
   padding: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
 }
 
 #scoresContainer div:nth-child(even) {
-  background-color: rgb(177, 163, 163);
+  background-color: rgb(47, 46, 46);
 }
 
 .addScoreDiv {
   padding: 2rem;
   width: 50%;
+  align-items: end;
 }
 
-#inputName {
-  width: 70%;
-}
-
-#inputScore {
+.input {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  width: 70%;
+  padding: 0.5rem;
+  width: 100%;
+  color: black;
 }
 
-.submitBtnContainer {
-  width: 72%;
-  justify-content: right;
+form {
+  align-items: end;
 }
 
 #submitBtn {
   box-shadow: 2px 2px;
-  width: 30%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background-color: white;
+  color: black;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#submitBtn:hover,
+#refreshBtn:hover {
+  background-color: white;
+  color: black;
+}
+
+.rankContainer {
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.credits {
+  justify-content: center;
 }

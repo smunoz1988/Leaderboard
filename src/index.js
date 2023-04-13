@@ -1,5 +1,12 @@
 import './style.css';
 
+//  html elements
+const inputName = document.getElementById('inputName');
+const inputScore = document.getElementById('inputScore');
+const submitBtn = document.getElementById('submitBtn');
+const refreshBtn = document.getElementById('refreshBtn');
+
+//  Get data from API
 const getDataServer = async () => {
   try {
     const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/DjGnLPNMPeUjhLoQI02H/scores/', {
@@ -12,28 +19,7 @@ const getDataServer = async () => {
   }
 };
 
-const generateScoreItem = (score) => {
-  const itemScore = `<div>${score.user}:${score.score}</div>`;
-  return itemScore;
-};
-
-const renderScores = async () => {
-  try {
-    const score = await getDataServer();
-    const { result } = score;
-    result.sort((a, b) => b.score - a.score);
-    const scoreContainer = document.getElementById('scoresContainer');
-    scoreContainer.innerHTML = '';
-    result.forEach((score) => {
-      const itemScore = generateScoreItem(score);
-      scoreContainer.innerHTML += itemScore;
-    });
-  } catch (error) {
-    return error;
-  }
-  return null;
-};
-
+//  Send data to server
 const postDataServer = async (inputData) => {
   try {
     const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/DjGnLPNMPeUjhLoQI02H/scores/', {
@@ -50,12 +36,37 @@ const postDataServer = async (inputData) => {
   }
 };
 
-const refreshBtn = document.getElementById('refreshBtn');
-refreshBtn.addEventListener('click', renderScores);
+//  Render scores on html after consuming API with getDataServer function
+const generateScoreItem = (score, index) => {
+  const itemScore = `
+  <div class='rankContainer flex-row'>
+    <p>${index + 1}</p>
+    <p>${score.user}</p>
+    <p>${score.score}</p>
+  </div>
+  `;
+  return itemScore;
+};
 
-const inputName = document.getElementById('inputName');
-const inputScore = document.getElementById('inputScore');
-const submitBtn = document.getElementById('submitBtn');
+const renderScores = async () => {
+  try {
+    const score = await getDataServer();
+    const { result } = score;
+    result.sort((a, b) => b.score - a.score);
+    const scoreContainer = document.getElementById('scoresContainer');
+    scoreContainer.innerHTML = '';
+    result.forEach((score, index) => {
+      const itemScore = generateScoreItem(score, index);
+      scoreContainer.innerHTML += itemScore;
+    });
+  } catch (error) {
+    return error;
+  }
+  return null;
+};
+
+//  Button listeners to consume APIs
+refreshBtn.addEventListener('click', renderScores);
 
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
