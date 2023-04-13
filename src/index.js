@@ -38,10 +38,10 @@ const postDataServer = async (inputData) => {
 
 
 //Render scores on html after consuming API with getDataServer function
-const generateScoreItem = (score) => {
+const generateScoreItem = (score, index) => {
   const itemScore = `
   <div class='rankContainer flex-row'>
-    <p>1</p>
+    <p>${index + 1}</p>
     <p>${score.user}</p>
     <p>${score.score}</p>
   </div>
@@ -56,8 +56,8 @@ const renderScores = async () => {
     result.sort((a, b) => b.score - a.score);
     const scoreContainer = document.getElementById('scoresContainer');
     scoreContainer.innerHTML = '';
-    result.forEach((score) => {
-      const itemScore = generateScoreItem(score);
+    result.forEach((score, index) => {
+      const itemScore = generateScoreItem(score, index);
       scoreContainer.innerHTML += itemScore;
     });
   } catch (error) {
