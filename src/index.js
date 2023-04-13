@@ -1,12 +1,12 @@
 import './style.css';
 
-//html elements
+//  html elements
 const inputName = document.getElementById('inputName');
 const inputScore = document.getElementById('inputScore');
 const submitBtn = document.getElementById('submitBtn');
 const refreshBtn = document.getElementById('refreshBtn');
 
-//Get data from API
+//  Get data from API
 const getDataServer = async () => {
   try {
     const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/DjGnLPNMPeUjhLoQI02H/scores/', {
@@ -19,7 +19,7 @@ const getDataServer = async () => {
   }
 };
 
-//Send data to server
+//  Send data to server
 const postDataServer = async (inputData) => {
   try {
     const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/DjGnLPNMPeUjhLoQI02H/scores/', {
@@ -36,8 +36,7 @@ const postDataServer = async (inputData) => {
   }
 };
 
-
-//Render scores on html after consuming API with getDataServer function
+//  Render scores on html after consuming API with getDataServer function
 const generateScoreItem = (score, index) => {
   const itemScore = `
   <div class='rankContainer flex-row'>
@@ -66,7 +65,7 @@ const renderScores = async () => {
   return null;
 };
 
-//Button listeners to consume APIs
+//  Button listeners to consume APIs
 refreshBtn.addEventListener('click', renderScores);
 
 submitBtn.addEventListener('click', (e) => {
