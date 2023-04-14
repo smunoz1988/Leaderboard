@@ -19,7 +19,14 @@ body {
 }
 
 h1 {
-  margin: 2rem;
+  margin: 4rem;
+  font-size: 4rem;
+  color: white;
+  justify-content: center;
+}
+
+h2 {
+  margin: 1rem;
   color: white;
   justify-content: center;
 }
@@ -53,15 +60,9 @@ h1 {
   cursor: pointer;
 }
 
-#scoresContainer {
-  border: solid 2px white;
-}
-
 #scoresContainer div {
-  padding: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
 @keyframes myAnim {
@@ -93,7 +94,7 @@ h1 {
 }
 
 #scoresContainer div:nth-child(even) {
-  background-color: rgb(47, 46, 46);
+  background-color: rgb(27, 16, 60, 0.5);
 }
 
 .addScoreDiv {
@@ -128,6 +129,7 @@ form {
 #refreshBtn:hover {
   background-color: white;
   color: black;
+  animation: myAnim 2s ease 0s 1 normal forwards; 
 }
 
 .rankContainer {
@@ -138,4 +140,17 @@ form {
 
 .credits {
   justify-content: center;
+  animation: fade 2s infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
