@@ -129,7 +129,7 @@ form {
 #refreshBtn:hover {
   background-color: white;
   color: black;
-  animation: myAnim 2s ease 0s 1 normal forwards; 
+  animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
 .rankContainer {
@@ -147,9 +147,11 @@ form {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
