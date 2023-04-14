@@ -71,7 +71,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- In the future is going to be deployed. 
+- https://rainbow-frangipane-e9a157.netlify.app/ 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
