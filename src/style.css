@@ -127,7 +127,7 @@ form {
 
 #submitBtn:hover,
 #refreshBtn:hover {
-  background-color: white;
+  background-color: rgb(82, 244, 161);
   color: black;
   animation: myAnim 2s ease 0s 1 normal forwards;
 }
