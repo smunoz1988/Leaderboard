@@ -2,7 +2,7 @@
 
 * {
   font-family: 'Press Start 2P', cursive;
-  color: white;
+  color: #53b8b4; 
 }
 
 body {
@@ -21,13 +21,13 @@ body {
 h1 {
   margin: 4rem;
   font-size: 4rem;
-  color: white;
+  color: #0dbfb7;
   justify-content: center;
 }
 
 h2 {
   margin: 1rem;
-  color: white;
+  color: #53b8b4; 
   justify-content: center;
 }
 
@@ -54,7 +54,7 @@ h2 {
 #refreshBtn {
   box-shadow: 2px 2px;
   padding: 0.5rem;
-  background-color: white;
+  background-color: #53b8b4;
   color: black;
   transition: 0.4s;
   cursor: pointer;
@@ -108,6 +108,7 @@ h2 {
   margin-bottom: 1rem;
   padding: 0.5rem;
   width: 100%;
+  background-color: #53b8b4;
   color: black;
 }
 
@@ -119,7 +120,7 @@ form {
   box-shadow: 2px 2px;
   padding: 0.5rem;
   margin-top: 1rem;
-  background-color: white;
+  background-color: #53b8b4;
   color: black;
   transition: 0.4s;
   cursor: pointer;
@@ -127,7 +128,7 @@ form {
 
 #submitBtn:hover,
 #refreshBtn:hover {
-  background-color: rgb(82, 244, 161);
+  background-color: white;
   color: black;
   animation: myAnim 2s ease 0s 1 normal forwards;
 }
