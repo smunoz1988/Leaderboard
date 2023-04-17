@@ -34,6 +34,7 @@ h2 {
 #scoreSection {
   width: 100%;
   margin: auto;
+  flex-direction: column-reverse;
 }
 
 .divTitles {
@@ -99,7 +100,6 @@ h2 {
 
 .addScoreDiv {
   padding: 2rem;
-  width: 50%;
   align-items: end;
 }
 
@@ -162,5 +162,9 @@ form {
   h1 {
     margin: 4rem;
     font-size: 4rem;
+  }
+
+  #scoreSection {
+    flex-direction: row;
   }
 }
