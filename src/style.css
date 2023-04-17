@@ -2,7 +2,7 @@
 
 * {
   font-family: 'Press Start 2P', cursive;
-  color: white;
+  color: rgba(255, 255, 255, 0.905); 
 }
 
 body {
@@ -19,31 +19,32 @@ body {
 }
 
 h1 {
-  margin: 4rem;
-  font-size: 4rem;
-  color: white;
-  justify-content: center;
+  margin: 2rem;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.905);
+  text-align: center;
 }
 
 h2 {
   margin: 1rem;
-  color: white;
+  color: rgba(255, 255, 255, 0.905); 
   justify-content: center;
 }
 
 #scoreSection {
-  width: 80%;
+  width: 100%;
   margin: auto;
+  flex-direction: column-reverse;
 }
 
 .divTitles {
+  text-align: center;
   font-size: 1.5rem;
   font-weight: 900;
 }
 
 .scoresDiv {
   padding: 2rem;
-  width: 50%;
 }
 
 .recentScores {
@@ -54,10 +55,11 @@ h2 {
 #refreshBtn {
   box-shadow: 2px 2px;
   padding: 0.5rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.905);
   color: black;
   transition: 0.4s;
   cursor: pointer;
+  width: 70%;
 }
 
 #scoresContainer div {
@@ -99,7 +101,6 @@ h2 {
 
 .addScoreDiv {
   padding: 2rem;
-  width: 50%;
   align-items: end;
 }
 
@@ -109,25 +110,26 @@ h2 {
   padding: 0.5rem;
   width: 100%;
   color: black;
+  background-color: rgba(255, 255, 255, 0.905);
 }
 
 form {
-  align-items: end;
+  align-items: center;
 }
 
 #submitBtn {
   box-shadow: 2px 2px;
   padding: 0.5rem;
   margin-top: 1rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.905);
   color: black;
   transition: 0.4s;
   cursor: pointer;
+  width: 70%;
 }
 
 #submitBtn:hover,
 #refreshBtn:hover {
-  background-color: white;
   color: black;
   animation: myAnim 2s ease 0s 1 normal forwards;
 }
@@ -154,5 +156,38 @@ form {
 
   100% {
     opacity: 1;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  h1 {
+    margin: 4rem;
+    font-size: 4rem;
+  }
+
+  #scoreSection {
+    flex-direction: row;
+  }
+
+  form {
+  align-items: end;
+  }
+
+  #submitBtn {
+    width: auto;
+  }
+
+  .recentScores {
+    flex-direction: row;
+  }
+
+  .scoresDiv {
+    padding: 2rem;
+    width: 50%;
+  }
+
+  #refreshBtn {
+    width: auto;
   }
 }
